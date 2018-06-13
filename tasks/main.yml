@@ -1,7 +1,7 @@
 ---
 # Task Configuration
 - name: Include OS-specific tasks
-  include_tasks: "{{ item }}"
+  include_tasks: "{{ os_tasks }}"
   with_first_found: 
     - files:
       - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
@@ -9,3 +9,5 @@
       - "{{ ansible_distribution }}.yml"
       - "{{ ansible_os_family }}.yml"
       skip: true
+  loop_control:
+    loop_var: os_tasks 

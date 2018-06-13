@@ -1,7 +1,7 @@
 ---
 - name: Fix broken apt module for Ubuntu 1604
   apt:
-    name: "{{ package }}"
+    name: "{{ item }}"
     state: present
   with_items:
   - python-simplejson

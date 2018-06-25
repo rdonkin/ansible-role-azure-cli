@@ -2,7 +2,7 @@
 dependencies: []
 
 galaxy_info:
-  author: brentwg
+  author: huxoll
   description: This role installs the Microsoft Azure CLI for Linux.
   company: "None"
   license: "None"

@@ -6,7 +6,7 @@ To run the test playbook(s) in this directory:
 
   1. Install and start Docker.  
   1. Download the test shim (see .travis.yml file for the URL) into `tests/test.sh`:  
-`wget -O tests/test.sh https://gist.github.com/brentwg/64f90bdda32a51360f71558d3171fcbb/raw/`  
+`wget -O tests/test.sh https://gist.githubusercontent.com/huxoll/a38456caf7337c9831998facb5ca3e8b/raw/41bdd63e6eb4b09a08b7355e42e0e1eea5f6bae6/test.sh`  
   1. Make the test shim executable: `chmod +x tests/test.sh`.  
   1. Run (from the role's root directory) `distro=[distro] playbook=[playbook] ./tests/test.sh`  
 

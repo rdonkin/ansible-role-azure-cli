@@ -8,7 +8,7 @@
   - aptitude
   - apt-transport-https
   when: ansible_os_family == 'Debian'
-  
+
 - name: Import the APT repo key (Debian)
   apt_key:
     url: "{{ repo_key_url }}"
@@ -24,3 +24,4 @@
   apt:
     name: "{{ azure_package_name }}"
     update_cache: yes
+  when: not ansible_check_mode

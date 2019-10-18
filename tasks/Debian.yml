@@ -1,5 +1,5 @@
 ---
-- name: Fix broken apt module for Ubuntu 1604
+- name: Fix broken apt module for Ubuntu 16.04
   apt:
     name: "{{ item }}"
     state: present

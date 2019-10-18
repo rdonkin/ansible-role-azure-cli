@@ -12,3 +12,4 @@
   package:
     name: "{{ azure_package_name }}"
     state: present
+  when: not ansible_check_mode

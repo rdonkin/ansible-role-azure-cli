@@ -1,12 +1,11 @@
 ---
 - name: Fix broken apt module for Ubuntu 16.04
   apt:
-    name: "{{ item }}"
+    name:
+      - python-simplejson
+      - aptitude
+      - apt-transport-https
     state: present
-  with_items:
-  - python-simplejson
-  - aptitude
-  - apt-transport-https
   when: ansible_os_family == 'Debian'
 
 - name: Import the APT repo key (Debian)

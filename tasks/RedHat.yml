@@ -10,6 +10,6 @@
 
 - name: Install the application package (RedHat)
   package:
-    name: "{{ azure_package_name }}"
+    name: "{{ azure_package_name }}-{{ azure_package_version['redhat'] }}"
     state: present
   when: not ansible_check_mode

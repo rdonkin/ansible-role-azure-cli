@@ -21,6 +21,6 @@
 
 - name: Install the application package (Debian)
   apt:
-    name: "{{ azure_package_name }}"
+    name: "{{ azure_package_name }}={{ azure_package_version['debian'] }}"
     update_cache: yes
   when: not ansible_check_mode
